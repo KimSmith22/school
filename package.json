@@ -1,0 +1,14 @@
+{
+  "name": "school",
+  "version": "1.0.0",
+  "description": "this is a training school website",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "kimberli smith",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.15.3"
+  }
+}
