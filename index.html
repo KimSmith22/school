@@ -25,14 +25,15 @@
           <div class="ready">
             <h1>Ready For The First Step?</h1>
             <br>
-            <h4>Fill out the form below to receive more information on Entrapreneur, Training, and Development training programs</h4>
+            <h4>Fill out the form below to receive more information on Entrepreneural and Career Training programs</h4>
           </div>
         </div>
       </div> <!--end head-->
 
       <div class="main row container-fluid">
-        <div class="col-sm-7 col-sm-offset-1 text"> <!--this will hold information-->
-          <h2>Entrapreneur Programs and Career Training</h2>
+         <!--this will hold information-->
+        <div class="col-sm-7 col-sm-offset-1 text">
+          <h2>Entrepreneur Programs and Career Training</h2>
             <br>
             <p>
               Ilitch Family coney dog Wayne State University coney island coney dog rebirth the big three. Corktown Quicken Loans
@@ -42,21 +43,23 @@
               People Mover Downtown coney dog rebirth GM.
             </p>
             <div class="row in">
-          <h3>Entrapreneur and Career Training Programs Include</h3>
+          <h3>Entrepreneur and Career Training Programs Include</h3>
               <a href="#" class="button">Home Health Care Agency</a>
-              <a href="template.html" class="button">Direct Care Worker</a>
+              <a href="#" class="button">Direct Care Worker</a>
               <a href="#" class="button">Certified Nurse Assistant</a>
-              <a href="#" class="button">Medical Massage Therapist Entrapreneural Program</a>
+              <a href="#" class="button">Medical Massage Therapist Entrepreneur Program</a>
               <a href="#" class="button">Group Home / Apartment Program</a>
-              <a href="#" class="button">Transportation Company Entrapreneural Program</a>
+              <a href="#" class="button">General Repair Technician Entrapreneur Program</a>
+              <a href="#" class="button">Transportation Company Entrepreneur Program</a>
               <a href="#" class="button">Janitorial Entrapreneural Program</a>
-              <a href="#" class="button">Security Monitoring Service Entrapreneural Program</a> <!--security camera installation and monitoring-->
-              <a href="#" class="button">Information Technology Program</a>
+              <a href="#" class="button">Security Monitoring Service Entrepreneur Program</a> <!--security camera installation and monitoring-->
+              <a href="#" class="button">Executive Administrative Assistant Entrepreneur Program</a>
+              <a href="#" class="button">Medical Marijuana Related Entrepreneur Programs</a>
             </div>
               <br>
             <div class="row in">
-          <h3>Why Choose Number One Entrapreneur Training and Develpment Center</h3>
-              <p>
+          <h3>Why Choose Number One Entrepreneur Training and Develpment Center</h3>
+              <!-- <p>
                 Chrysler Ilitch family Corktown New Center motor city coney dog Quicken Loans. Like A Rock Corktown New Center Ford
                 Corktown Midtown GM. New Center GM Pistons Greektown Pistons GM Ilitch family. New Center Chrysler like a rock
                 Mexican Town Downtown motor city rebirth. Detroit Midtown rebirth Quicken Loans Lions Corktown like a rock.
@@ -65,100 +68,91 @@
                 GM motor city Greektown Quicken Loans Greektown Lions Corktown. GM motor city Quicken Loans rebirth People Mover Greektown Downtown.
                 Motor City Ford People Mover motor city Mexican Town Lions Pistons. Lions the big three Pistons the big three Wayne State University
                 Ford Tigers. People Mover Corktown People Mover Greektown Mexican Town People Mover Ford.
-              </p>
+              </p> -->
+
             </div>
         </div>
         <script>
         function getprograms(remoteCampaignId)
         {
-          $.post("<!--url goes here-->", { remoteCampaignId: remoteCampaignId },
+          $.post("#", { remoteCampaignId: remoteCampaignId },
              function(data){
             $('#ShowPrograms').html(data);
           });
         }
         </script>
-        <div class="col-sm-3 col-sm-offset- -1 info"> <!--this will hold the registration form-->
+        <!--this will hold the registration form-->
+        <div class="col-sm-3 col-sm-offset- -1 info">
           <div class="text-center">
             <img src="img/requestInfo.png" id="title-head" class="img-responsive">
           </div>
-          <form id="basicBootstrapForm" class="form-horizontal contact" name="msform" role="form" method="post" action="/" onsubmit="return validate()" autocomplete="off">
-    			 <div class="form-group">
-    				<div class="col-xs-12">
-    					<select id="programOfInterest" name="programOfInterest" class="form-control" onChange="getcampuses(this.value);">
-    						<option value="">Program of Interest</option>
-									<option value="direct-care" >Direct Care</option>
-									<option value="nurse-assistant" >Certified Nurse Assistant</option>
-									<option value="maintenance" > General Repair Technician Entrapreneur Program</option>
-									<option value="janitorial" >Janitorial Services Entrapreneur Program</option>
-                  <option value="medical-assistant" >Medical Assistant</option>
-                  <option value="patient-care-technician" >Patient Care Technician</option>
-									<option value="information-technology" >Information Technology Program</option>
-    					</select>
-    				</div>
-    			</div>
 
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
-    				</div>
-    			</div>
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
-    				</div>
-    			</div>
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="email" class="form-control" id="emailaddress" name="email" placeholder="Email address" />
-    				</div>
-    			</div>
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="tel" class="form-control" id="homePhone" name="homePhone" placeholder="Phone" />
-    				</div>
-    			</div>
+          <form id="basicBoostrapForm" class="form-horizontal contact" name="">
 
-    			<div class="form-group">
-    				<div class="col-xs-12 consent-text error-box" id="errorbox">
-    						<div id="error-002"></div>
-    						<div id="error-001"></div>
-    						<div id="error-003"></div>
-    						<div id="error-003a"></div>
-    						<div id="error-003b"></div>
-    						<div id="error-004"></div>
-    						<div id="error-004a"></div>
-    						<!--<div id="error-004b"></div>
-    						<div id="error-004c"></div>
-    						<div id="error-007"></div>
-    						<div id="error-005"></div>
-    						<div id="error-006"></div>
-    						<div id="error-006a"></div> -->
-    				</div>
-    			</div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <select class="form-control" id="interest" name="program">
+                  <option value="area of interest">Program of Interest</option>
+                    <option value="home health care agency">Home Health Care Agency Entrepreneur Program</option>
+                    <option value="direct-care">Direct Care Worker</option>
+                    <option value="nurse-assistant">Certified Nurse Assistant</option>
+                    <option value="massge therapist">Medical Massage Therapist Entrepreneural Program</option>
+                    <option value="group home">Group Home / Apartment Program</option>
+                    <option value="maintenance">General Repair Technician Entrapreneur Program</option>
+                    <option value="transportation">Transportation Company Entrepreneur Program</option>
+                    <option value="janitorial">Janitorial Services Entrapreneur Program</option>
+                    <option value="security monitoring">Security Monitoring Service Entrepreneur Program</option>
+                    <option value="medical-assistant">Medical Assistant</option>
+                    <option value="executive admin program">Executive Administrative Assistant Entrepreneur Program</option>
+                    <option value="marijuana programs">Medical Marijuana Related Entrepreneur Programs</option>
+                </select>
+              </div>
+            </div>
 
-    			<div class="form-group">
-    				<div class="container col-xs-12 consent-text">
-              <p>Clicking the button implies your express written consent
-                to be contacted by Number One Entrapreneur Training and Development Center either by telephone, mobile device (including SMS and MMS)
-                using the phone numbers provided above, and/or email, even if your telephone number is on a Do Not Call Registry, and you agree to our terms of use and privacy policy.
-                Standard message and data rates apply.</p>
-    				</div>
-    			</div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="email" class="form-control" id="emailaddress" name="email" placeholder="Email address" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12 consent-text text-center">
+                <p>Clicking the button implies your express written consent
+                  to be contacted by Number One Entrapreneur Training and Development Center either by telephone, mobile device (including SMS and MMS)
+                  using the phone numbers provided above, and/or email, even if your telephone number is on a Do Not Call Registry, and you agree to our terms of use and privacy policy.
+                  Standard message and data rates apply.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12 text-center">
+                <button type="submit" class="btn gradient btn-primary btn-block btn-lg" name="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+          </div>
 
-    			<div class="form-group">
-    				<div class="col-xs-12 text-center">
-    					<button type="submit" class="btn btn-primary gradient btn-lg btn-block" name="submit">Get Started Now!</button>
-    				</div>
-    			</div>
-    		</form>
         </div>
       </div> <!--end main-->
           <div class="text-center brand bottom">
             <p>
               <br>
-            Career Services is available to all eligible graduates, however, job placement is not guaranteed by Number One Entrapreneur Training and Development Center.
+            Career Services are available to all eligible graduates, however, job placement is not guaranteed by Number One Entrapreneur Training and Development Center.
             <br>
-            Programs vary by semester. Financial Assistance is available for those who qualify.
+            Programs vary by semester. Financial Assistance may be available for those who qualify.
             <br>
               <ul>
                 <li><a class="navbar-brand indent" href="#">
