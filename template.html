@@ -77,106 +77,69 @@
               </p>
             </div>
         </div>
-        <script>
-        function getprograms(remoteCampaignId)
-        {
-          $.post("<!--url goes here-->", { remoteCampaignId: remoteCampaignId },
-             function(data){
-            $('#ShowPrograms').html(data);
-          });
-        }
-        </script>
-        <div class="col-sm-3 col-sm-offset- -1 info"> <!--this will hold the registration form-->
+
+        <div class="col-sm-3 col-sm-offset- -1 info">
           <div class="text-center">
             <img src="img/requestInfo.png" id="title-head" class="img-responsive">
           </div>
-          <form id="basicBootstrapForm" class="form-horizontal contact" name="msform" role="form" method="post" action="/" onsubmit="return validate()" autocomplete="off">
-    			 <div class="form-group">
-    				<div class="col-xs-12">
-    					<select id="programOfInterest" name="programOfInterest" class="form-control" onChange="getcampuses(this.value);">
-    						<option value="">Program of Interest</option>
-									<option value="direct-care" >Direct Care</option>
-									<option value="nurse-assistant" >Certified Nurse Assistant</option>
-									<option value="maintenance" > General Repair Technician Entrapreneur Program</option>
-									<option value="janitorial" >Janitorial Services Entrapreneur Program</option>
-                  <option value="medical-assistant" >Medical Assistant</option>
-                  <option value="patient-care-technician" >Patient Care Technician</option>
-									<option value="information-technology" >Information Technology Program</option>
-    					</select>
-    				</div>
-    			</div>
 
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
-    				</div>
-    			</div>
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
-    				</div>
-    			</div>
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="email" class="form-control" id="emailaddress" name="email" placeholder="Email address" />
-    				</div>
-    			</div>
-    			<div class="form-group">
-    				<div class="col-xs-12">
-    					<input type="tel" class="form-control" id="homePhone" name="homePhone" placeholder="Phone" />
-    				</div>
-    			</div>
+          <form id="basicBoostrapForm" class="form-horizontal contact" name="">
 
-    			<div class="form-group">
-    				<div class="col-xs-12 consent-text error-box" id="errorbox">
-    						<div id="error-002"></div>
-    						<div id="error-001"></div>
-    						<div id="error-003"></div>
-    						<div id="error-003a"></div>
-    						<div id="error-003b"></div>
-    						<div id="error-004"></div>
-    						<div id="error-004a"></div>
-    						<!--<div id="error-004b"></div>
-    						<div id="error-004c"></div>
-    						<div id="error-007"></div>
-    						<div id="error-005"></div>
-    						<div id="error-006"></div>
-    						<div id="error-006a"></div> -->
-    				</div>
-    			</div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <select class="form-control" id="interest" name="program">
+                  <option value="area of interest">Program of Interest</option>
+                    <option value="home health care agency">Home Health Care Agency Entrepreneur Program</option>
+                    <option value="direct-care">Direct Care Worker</option>
+                    <option value="nurse-assistant">Certified Nurse Assistant</option>
+                    <option value="massge therapist">Medical Massage Therapist Entrepreneural Program</option>
+                    <option value="group home">Group Home / Apartment Program</option>
+                    <option value="maintenance">General Repair Technician Entrapreneur Program</option>
+                    <option value="transportation">Transportation Company Entrepreneur Program</option>
+                    <option value="janitorial">Janitorial Services Entrapreneur Program</option>
+                    <option value="security monitoring">Security Monitoring Service Entrepreneur Program</option>
+                    <option value="medical-assistant">Medical Assistant</option>
+                    <option value="executive admin program">Executive Administrative Assistant Entrepreneur Program</option>
+                    <option value="marijuana programs">Medical Marijuana Related Entrepreneur Programs</option>
+                </select>
+              </div>
+            </div>
 
-    			<div class="form-group">
-    				<div class="col-xs-12 consent-text">
-              <p>Clicking the button implies your express written consent
-                to be contacted by Number One Entrapreneur Training and Development Center either by telephone, mobile device (including SMS and MMS)
-                using the phone numbers provided above, and/or email, even if your telephone number is on a Do Not Call Registry, and you agree to our terms of use and privacy policy.
-                Standard message and data rates apply.</p>
-    				</div>
-    			</div>
-
-    			<div class="form-group">
-    				<div class="col-xs-12 text-center">
-    								<input type="text" name="socialsecuritynumber" value="" style="display: none; visibility: hidden;"/>
-    				<input type="hidden" name="Send" value="1"/>
-    				<input type="hidden" name="isTest" value="0"/>
-    				<input type="hidden" name="campaignCode" value="noOne-prgm"/>
-    				<input type="hidden" class="emsdmt_referrerUrl" name="referrerUrl"/>
-    				<input type="hidden" class="emsdmt_trackingIsBranded" name="trackingIsBranded"/>
-    				<input type="hidden" class="emsdmt_trackingCampaign" name="trackingCampaign"/>
-    				<input type="hidden" class="emsdmt_trackingContentId" name="trackingContentId"/>
-    				<input type="hidden" class="emsdmt_leadFormUrl" name="leadFormUrl"/>
-    				<input type="hidden" class="emsdmt_trackingDevice" name="trackingDevice"/>
-    				<input type="hidden" class="emsdmt_trackingKeyword" name="trackingKeyword"/>
-    				<input type="hidden" class="emsdmt_trackingMatchType" name="trackingMatchType"/>
-    				<input type="hidden" class="emsdmt_trackingMedium" name="trackingMedium"/>
-    				<input type="hidden" class="emsdmt_trackingSource" name="trackingSource"/>
-    				<input type="hidden" class="emsdmt_trackingURL" name="trackingURL"/>
-    				<input type="hidden" class="emsdmt_acquisioTrackingID" name="acquisioTrackingID"/>
-    					<button type="submit" class="btn btn-primary gradient btn-lg btn-block submit" name="submit">Get Started Now!</button>
-    				</div>
-    			</div>
-    		</form>
-        </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input type="email" class="form-control" id="emailaddress" name="email" placeholder="Email address" />
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12">
+                <input class="form-control" type="tel" placeholder="Phone Number" id="example-tel-input">
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12 consent-text text-center">
+                <p>Clicking the button implies your express written consent
+                  to be contacted by Number One Entrapreneur Training and Development Center either by telephone, mobile device (including SMS and MMS)
+                  using the phone numbers provided above, and/or email, even if your telephone number is on a Do Not Call Registry, and you agree to our terms of use and privacy policy.
+                  Standard message and data rates apply.</p>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="col-xs-12 text-center">
+                <button type="submit" class="btn gradient btn-primary btn-block btn-lg" name="submit">Submit</button>
+              </div>
+            </div>
+          </form>
+          </div>
       </div> <!--end main-->
           <div class="text-center brand bottom">
             <p>
